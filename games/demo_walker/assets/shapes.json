@@ -1,0 +1,33 @@
+{
+  "program": {
+    "world": 4000,
+    "hscale": 2,
+    "sea": 0.75,
+    "flood": false,
+    "out": "ground",
+    "nodes": [
+      { "id": "ground", "op": "noise", "kind": "simplex", "freq": 8, "seed": 7 }
+    ]
+  },
+  "analysis": {
+    "slopeStep": 1,
+    "curveStep": 4,
+    "positionRadius": 20,
+    "occlusionRadius": 40,
+    "occlusionSteps": 6,
+    "cliffProbe": 10,
+    "cliffSlope": 0.6,
+    "cliffDrop": 10,
+    "flatAngle": 0.03,
+    "records": 50000
+  },
+  "ground": {
+    "compose": "stack",
+    "roughness": 0.85,
+    "layers": [
+      { "name": "checker", "map": "checker", "scale": 2, "tri": true, "sharp": 4 }
+    ]
+  },
+  "surfaces": {},
+  "layers": []
+}

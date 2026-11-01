@@ -1,0 +1,508 @@
+{
+ "stations": [
+  {
+   "clip": "bracedidle",
+   "on": "ledge4-2.6",
+   "at": [
+    -24.5,
+    8.681
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "bracedleft",
+   "on": "ledge5-2.6",
+   "at": [
+    -17.5,
+    8.681
+   ],
+   "side": 1,
+   "along": 0.2
+  },
+  {
+   "clip": "bracedright",
+   "on": "ledge5-2.6",
+   "at": [
+    -10.5,
+    8.681
+   ],
+   "side": 1,
+   "along": 0.8
+  },
+  {
+   "clip": "bracedclimb",
+   "on": "ledge4-2.6",
+   "at": [
+    -3.5,
+    8.681
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "braceddrop",
+   "on": "ledge4-2.646",
+   "at": [
+    3.5,
+    8.681
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "bracedjump",
+   "on": "ledge4-2.338",
+   "at": [
+    10.5,
+    8.681
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "freeidle",
+   "on": "ledge4-2.6",
+   "at": [
+    17.5,
+    8.681
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "freeleft",
+   "on": "ledge5-2.6",
+   "at": [
+    24.5,
+    8.681
+   ],
+   "side": 1,
+   "along": 0.2
+  },
+  {
+   "clip": "freeright",
+   "on": "ledge5-2.6",
+   "at": [
+    -24.5,
+    15.681
+   ],
+   "side": 1,
+   "along": 0.8
+  },
+  {
+   "clip": "freeclimb",
+   "on": "ledge4-2.6",
+   "at": [
+    -17.5,
+    15.681
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "freedrop",
+   "on": "ledge4-2.636",
+   "at": [
+    -10.5,
+    15.681
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "freejump",
+   "on": "ledge4-2.47",
+   "at": [
+    -3.5,
+    15.681
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "pullup",
+   "on": "ledge4-2.31",
+   "at": [
+    3.5,
+    15.681
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "wallclimb",
+   "on": "climbwall",
+   "at": [
+    10.5,
+    15.6
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "wallside",
+   "on": "runwall",
+   "at": [
+    18.5,
+    17.3
+   ],
+   "side": 1,
+   "along": 0.3
+  },
+  {
+   "clip": "vaultone",
+   "on": "vaultwall",
+   "at": [
+    24.5,
+    17.2
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "lean",
+   "on": "leanwall",
+   "at": [
+    -24.5,
+    22.2
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "teeter",
+   "on": "edge-0.598",
+   "at": [
+    -17.5,
+    21.5
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "jumpdown",
+   "on": "edge-0.635",
+   "at": [
+    -10.5,
+    21.5
+   ],
+   "side": 1,
+   "along": 0.5
+  },
+  {
+   "clip": "boxjump",
+   "on": "jumpbox-0.433",
+   "at": [
+    -3.5,
+    22
+   ]
+  },
+  {
+   "clip": "stairsup",
+   "on": "stair-0.238-1",
+   "at": [
+    3.5,
+    20.119
+   ]
+  },
+  {
+   "clip": "barmove",
+   "on": "bar",
+   "at": [
+    10.5,
+    22
+   ]
+  },
+  {
+   "clip": "ropeclimb",
+   "on": "rope",
+   "at": [
+    17.5,
+    22
+   ]
+  },
+  {
+   "clip": "ropeswing",
+   "on": "swing-7.136-beam",
+   "at": [
+    24.5,
+    20
+   ],
+   "props": [
+    {
+     "is": "platform",
+     "from": "end"
+    },
+    {
+     "is": "rope",
+     "from": "swing"
+    }
+   ]
+  },
+  {
+   "clip": "typing",
+   "on": "chair",
+   "at": [
+    -24.5,
+    29
+   ],
+   "props": [
+    {
+     "is": "table",
+     "from": "palms"
+    }
+   ]
+  },
+  {
+   "clip": "fax",
+   "at": [
+    -17.5,
+    29
+   ],
+   "yaw": 0,
+   "props": [
+    {
+     "is": "table",
+     "from": "palms"
+    }
+   ]
+  },
+  {
+   "clip": "bedidle",
+   "on": "bed-0.935",
+   "at": [
+    -10.5,
+    29
+   ]
+  },
+  {
+   "clip": "drive",
+   "on": "redcar-seat",
+   "at": [
+    -3.1,
+    29.1
+   ],
+   "props": [
+    {
+     "is": "wheel",
+     "from": "points"
+    }
+   ]
+  },
+  {
+   "clip": "carin",
+   "on": "bluecar-seat",
+   "at": [
+    3.4,
+    29.4
+   ]
+  },
+  {
+   "clip": "tread",
+   "at": [
+    10.5,
+    29
+   ],
+   "yaw": 0,
+   "water": 1.6,
+   "props": [
+    {
+     "is": "water",
+     "size": [
+      3.6,
+      3.6
+     ]
+    }
+   ]
+  },
+  {
+   "clip": "swimunder",
+   "at": [
+    17.5,
+    31
+   ],
+   "yaw": 0,
+   "water": 1.6,
+   "props": [
+    {
+     "is": "water",
+     "size": [
+      2.6,
+      8.6
+     ]
+    }
+   ]
+  },
+  {
+   "clip": "lieback",
+   "at": [
+    24.5,
+    29
+   ],
+   "yaw": 0
+  },
+  {
+   "clip": "kneel",
+   "at": [
+    -24.5,
+    36
+   ],
+   "yaw": 0
+  },
+  {
+   "clip": "crawl",
+   "at": [
+    -17.5,
+    34
+   ],
+   "yaw": 0
+  },
+  {
+   "clip": "dig",
+   "at": [
+    -10.5,
+    36
+   ],
+   "yaw": 0
+  },
+  {
+   "clip": "pickup",
+   "at": [
+    -3.5,
+    36
+   ],
+   "yaw": 0,
+   "props": [
+    {
+     "is": "crate",
+     "from": "point:R1"
+    }
+   ]
+  },
+  {
+   "clip": "carrybox",
+   "at": [
+    3.5,
+    36
+   ],
+   "yaw": 0,
+   "props": [
+    {
+     "is": "carried",
+     "from": "span"
+    }
+   ]
+  },
+  {
+   "clip": "push",
+   "at": [
+    10.5,
+    34
+   ],
+   "yaw": 0,
+   "props": [
+    {
+     "is": "carried",
+     "from": "span"
+    }
+   ]
+  },
+  {
+   "clip": "kick",
+   "at": [
+    17.5,
+    36
+   ],
+   "yaw": 0,
+   "props": [
+    {
+     "is": "ball",
+     "from": "strike:ballR"
+    }
+   ]
+  },
+  {
+   "clip": "keeper",
+   "at": [
+    24.5,
+    36
+   ],
+   "yaw": 0,
+   "props": [
+    {
+     "is": "ball",
+     "from": "points"
+    }
+   ]
+  },
+  {
+   "clip": "putt",
+   "at": [
+    -24.5,
+    43
+   ],
+   "yaw": 0,
+   "props": [
+    {
+     "is": "ball",
+     "from": "strike:handR"
+    }
+   ]
+  },
+  {
+   "clip": "button",
+   "at": [
+    -17.5,
+    43
+   ],
+   "yaw": 0,
+   "props": [
+    {
+     "is": "panel",
+     "from": "point:R0"
+    }
+   ]
+  },
+  {
+   "clip": "lever",
+   "at": [
+    -10.5,
+    43
+   ],
+   "yaw": 0,
+   "props": [
+    {
+     "is": "panel",
+     "from": "point:R0"
+    }
+   ]
+  },
+  {
+   "clip": "dooropen",
+   "at": [
+    -3.5,
+    41
+   ],
+   "yaw": 0,
+   "props": [
+    {
+     "is": "door",
+     "from": "point:R0"
+    }
+   ]
+  },
+  {
+   "clip": "shake1",
+   "at": [
+    3.5,
+    43
+   ],
+   "yaw": 0
+  },
+  {
+   "clip": "shake2",
+   "with": 44
+  }
+ ]
+}

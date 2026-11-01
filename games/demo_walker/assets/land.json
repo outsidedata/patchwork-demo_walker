@@ -1,0 +1,44 @@
+{
+  "program": {
+    "world": 4000,
+    "hscale": 10,
+    "sea": 0.5,
+    "flood": true,
+    "out": "ground",
+    "nodes": [
+      { "id": "ground", "op": "const", "value": 0.03 }
+    ]
+  },
+  "analysis": {
+    "slopeStep": 1,
+    "curveStep": 4,
+    "positionRadius": 20,
+    "occlusionRadius": 40,
+    "occlusionSteps": 6,
+    "cliffProbe": 10,
+    "cliffSlope": 0.6,
+    "cliffDrop": 10,
+    "flatAngle": 0.03,
+    "records": 50000
+  },
+  "ground": {
+    "compose": "stack",
+    "roughness": 0.85,
+    "layers": [
+      { "name": "checker", "map": "checker", "scale": 2, "tri": true, "sharp": 4 }
+    ]
+  },
+  "surfaces": {},
+  "layers": [
+    {
+      "at": [0, 0],
+      "size": 128,
+      "px": 512,
+      "strokes": [
+        { "verb": "lower", "radius": 10, "hardness": 0.25, "strength": 2.5, "level": 0, "surface": "", "path": [[-20, -16]] },
+        { "verb": "raise", "radius": 13, "hardness": 0.15, "strength": 3, "level": 0, "surface": "", "path": [[22, -22]] },
+        { "verb": "raise", "radius": 5, "hardness": 0.35, "strength": 4, "level": 0, "surface": "", "path": [[34, -6]] }
+      ]
+    }
+  ]
+}

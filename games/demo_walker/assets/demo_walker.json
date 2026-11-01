@@ -1,0 +1,70 @@
+{
+  "player": {
+    "walk": 1.7,
+    "run": 4.4,
+    "sens": 0.004,
+    "camera": { "minPitch": -0.5, "maxPitch": 1.3, "minDist": 2, "maxDist": 14, "zoom": 0.0015, "turn": 2.6, "tilt": 1.6, "step": 120 },
+    "keys": {
+      "stick": [["a", "ArrowLeft", "PadStickLeft"], ["d", "ArrowRight", "PadStickRight"], ["w", "ArrowUp", "PadStickUp"], ["s", "ArrowDown", "PadStickDown"]],
+      "look": ["PadRightStickLeft", "PadRightStickRight", "PadRightStickUp", "PadRightStickDown"],
+      "fast": ["Shift", "Pad7", "Pad10"],
+      "jump": [" ", "Pad0"],
+      "use": ["e", "Pad2"],
+      "crouch": ["c", "Pad1"],
+      "roll": ["q", "Pad4"],
+      "slide": ["x", "Pad5"],
+      "flip": ["f", "Pad3"],
+      "nearer": ["Pad12"],
+      "further": ["Pad13"],
+      "drag": "Mouse2"
+    },
+    "touch": { "touches": "xbot-touches", "body": "xbot", "lip": "freeclimb", "edge": "bracedidle", "rest": 1, "laps": 3, "reach": 1.5, "settle": 0.35 },
+    "moves": {
+      "touches": "xbot-touches",
+      "fit": 0.02,
+      "settle": 0.35,
+      "crouch": { "down": "crouch", "up": "uncrouch", "speed": 1.6 },
+      "seat": { "sit": "sitdown", "seated": "seated", "rise": "standup", "reach": 1.2 },
+      "cover": {
+        "stand": "cover", "crouch": "low",
+        "in": "cover", "out": "uncover", "lowIn": "lowcover", "lowOut": "unlowcover",
+        "mirror": { "cover": "covermirror", "uncover": "uncovermirror", "lowcover": "lowcovermirror", "unlowcover": "unlowcovermirror" },
+        "tall": 1.5, "low": 0.8, "hug": 0.35, "faces": "out", "speed": 1.2, "reach": 1.5, "margin": 0.35
+      },
+      "vault": { "clip": "vault", "reach": 0.8, "run": 2.5 },
+      "wallrun": { "clip": "wallrun", "reach": 0.8, "run": 2.5 },
+      "tricks": { "roll": "dodge", "slide": "slide", "flip": "frontflip", "backflip": "backflip", "landroll": "landroll", "land": "land", "slideAbove": 3, "flipAbove": 2.5, "rollAbove": 2.5 }
+    }
+  },
+  "mannequin": {
+    "touches": "xbot-touches",
+    "body": "xbot",
+    "lip": "freeclimb",
+    "edge": "bracedidle",
+    "rest": 1,
+    "laps": 3,
+    "away": 50
+  },
+  "wanderer": {
+    "stop": 0.6,
+    "rest": [1.5, 4]
+  },
+  "stage": {
+    "stations": "stations"
+  },
+  "chair": { "height": 0.437, "width": 0.5, "depth": 0.552, "back": 0.5, "behind": 0.222, "board": 0.05, "leg": 0.05, "tint": "#b08050" },
+  "tree": { "taper": 0.8, "crown": 1.4, "trunk": "#7a5636", "leaves": "#4f9a48" },
+  "water": { "colour": "#3d7fb8", "opacity": 0.72, "size": 400 },
+  "lift": { "speed": 1, "wait": 3 },
+  "ladder": {
+    "clips": { "mount": "mount", "climb": "ladder", "top": "dismount" },
+    "touches": "xbot-touches",
+    "standoff": 0.28,
+    "behind": 0.5,
+    "reach": 1.3,
+    "settle": 0.5,
+    "leap": [2.5, 3],
+    "fit": 0.02,
+    "look": { "width": 0.76, "rail": 0.05, "thick": 0.022, "above": 1, "colour": "#c9a46a" }
+  }
+}

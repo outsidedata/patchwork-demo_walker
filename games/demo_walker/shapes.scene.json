@@ -1,0 +1,141 @@
+{
+  "world": {
+    "defs": "demo_walker",
+    "seed": 7,
+    "player": { "deadzone": 0.2, "resolution": 32 },
+    "loader": {
+      "assets": {
+        "demo_walker": { "type": "json", "url": "/games/demo_walker/assets/demo_walker.json", "preload": true },
+        "shapes": { "type": "json", "url": "/games/demo_walker/assets/shapes.json", "preload": true },
+        "checker": { "type": "texture", "url": "/games/demo_walker/assets/checker-1024.webp", "preload": true, "wrap": "repeat", "anisotropy": 8 },
+        "xbot-rig": { "type": "json", "url": "/games/demo_walker/assets/xbot.rig.json", "preload": true },
+        "xbot": { "type": "model", "url": "/games/demo_walker/assets/xbot.glb", "preload": true }
+      }
+    },
+    "terrain3d": {
+      "field": "shapes",
+      "rings": [
+        { "reach": 64, "seg": 256 },
+        { "reach": 320, "seg": 128 },
+        { "reach": 2000, "seg": 100 }
+      ],
+      "shadowReach": 64,
+      "budget": 8,
+      "preload": true
+    },
+    "shapes3d": {
+      "kinds": {
+        "step": { "shape": { "box": { "size": [2, 0.25, 0.5] } }, "look": { "colour": "#f0a060", "roughness": 0.8 } },
+        "deck": { "shape": { "box": { "size": [6, 0.25, 6] } }, "look": { "colour": "#d088c8", "roughness": 0.8 } },
+        "ramp": { "shape": { "plane": { "size": [2, 6], "tilt": 0.29145679447786715 } }, "look": { "colour": "#70a8e8", "roughness": 0.8, "thick": 0.2 } },
+        "ledge": { "shape": { "box": { "size": [4, 0.3, 4] } }, "look": { "colour": "#60c0c0", "roughness": 0.8 } },
+        "pad": { "shape": { "plane": { "size": [6, 6] } }, "look": { "colour": "#e0c060", "roughness": 0.8, "thick": 0.3 } },
+        "block": { "shape": { "box": { "size": [1.5, 0.4, 1.5] } }, "look": { "colour": "#88d088", "roughness": 0.8 } },
+        "crate": { "shape": { "box": { "size": [1.5, 0.9, 1.5] } }, "look": { "colour": "#c07060", "roughness": 0.8 } },
+        "post": { "shape": { "cylinder": { "radius": 0.25, "height": 3 } }, "look": { "colour": "#7a5636", "roughness": 0.9, "sides": 10 } },
+        "lift": { "shape": { "hyperplane": { "size": [3, 3] } }, "look": { "colour": "#e07850", "roughness": 0.7, "thick": 0.2 } }
+      },
+      "mods": { "height": "terrain3d" }
+    },
+    "solids": {
+      "mods": { "models": "shapes3d" }
+    },
+    "walker": {
+      "kinds": {
+        "xbot": {
+          "radius": 0.3, "height": 1.8, "accel": 12, "airAccel": 2, "turnRate": 12, "gravity": 20, "jumpH": 1.1,
+          "step": 0.45, "maxSlope": 0.9, "slopeBand": 0.2, "slide": 4, "wade": 0.8, "span": 0.3, "probe": 0.5, "seekSpeed": 1.7
+        }
+      },
+      "mods": { "behaviors": "shapes3d" }
+    },
+    "anim": {
+      "still": 0.05, "shift": 0.75, "leap": 0.5, "landFall": 7.5, "moves": 0.05, "turns": 30,
+      "kinds": {
+        "xbot": {
+          "rig": "xbot-rig", "model": "xbot", "fade": 0.2, "falls": [{ "above": 4.3, "role": "fall" }],
+          "reads": { "pos": "pos", "yaw": "yaw", "vel": "vel", "grounded": "grounded", "limp": "limp" }
+        }
+      }
+    }
+  },
+  "plugins": ["loader", "scenemanager", "player", "terrain3d", "anim", "solids", "environment3d", "render3d", "chasecamera3d", "stats"],
+  "seats": 1,
+  "prefabs": {
+    "engine": { "dt": 0.016666666666666666, "width": 1280, "height": 720 },
+    "scenemanager": { "out": {} },
+    "loader": {},
+    "render3d": {
+      "camera": { "fov": 55, "near": 0.1, "far": 3000, "at": [0, 3, -6], "look": [0, 1, 0] },
+      "pixelRatio": 2,
+      "tone": "neutral",
+      "exposure": 1,
+      "shadows": "soft",
+      "background": "#bcd4e8",
+      "ao": { "on": false, "radius": 0.6, "thickness": 0.5, "falloff": 1, "scale": 1, "intensity": 1, "samples": 16 },
+      "bloom": { "strength": 0.15, "radius": 0.4, "threshold": 1.5 }
+    },
+    "environment3d": {
+      "sun": { "color": "#fff3e0", "power": 2.6, "at": [-30, 60, -40], "shadow": { "map": 4096, "half": 40, "near": 1, "far": 200, "distance": 100, "bias": -0.0002, "normalBias": 0.02 } },
+      "sky": { "color": "#dbe8f5", "ground": "#6b6252", "power": 1.1 }
+    },
+    "start": { "slot": 0, "pos": [0, 0], "yaw": 0 },
+    "player": {
+      "seat": 0,
+      "stood": false,
+      "as": "xbot",
+      "pos": [0, 0, 0],
+      "yaw": 0,
+      "vel": [0, 0, 0],
+      "grounded": false,
+      "sliding": false,
+      "speed": 0,
+      "side": 0,
+      "turned": 0,
+      "want": [0, 0],
+      "face": null,
+      "jump": false,
+      "stick": [0, 0],
+      "turning": [0, 0],
+      "fast": false,
+      "look": { "yaw": 0, "pitch": 0.35, "dist": 5 },
+      "lift": 1.4,
+      "rig": "stand"
+    },
+    "step": { "pos": [0, 0, 0], "yaw": 0 },
+    "deck": { "pos": [0, 0, 0], "yaw": 0 },
+    "ramp": { "pos": [0, 0, 0], "yaw": 0 },
+    "ledge": { "pos": [0, 0, 0], "yaw": 0 },
+    "pad": { "pos": [0, 0, 0], "yaw": 0 },
+    "block": { "pos": [0, 0, 0], "yaw": 0 },
+    "crate": { "pos": [0, 0, 0], "yaw": 0 },
+    "post": { "pos": [0, 0, 0], "yaw": 0 },
+    "lift": { "pos": [0, 0, 0], "rot": [0, 0, 0, 1], "was": null, "low": 0, "high": 0, "going": 1, "held": 0 }
+  },
+  "actors": [
+    { "is": "scenemanager" },
+    { "is": "loader" },
+    { "is": "start", "slot": 0, "pos": [0, -8], "yaw": 0 },
+    { "is": "step", "pos": [-6, 0, 0.25] },
+    { "is": "step", "pos": [-6, 0.25, 0.75] },
+    { "is": "step", "pos": [-6, 0.5, 1.25] },
+    { "is": "step", "pos": [-6, 0.75, 1.75] },
+    { "is": "step", "pos": [-6, 1, 2.25] },
+    { "is": "step", "pos": [-6, 1.25, 2.75] },
+    { "is": "step", "pos": [-6, 1.5, 3.25] },
+    { "is": "step", "pos": [-6, 1.75, 3.75] },
+    { "is": "step", "pos": [-6, 2, 4.25] },
+    { "is": "step", "pos": [-6, 2.25, 4.75] },
+    { "is": "deck", "pos": [-6, 2.25, 8] },
+    { "is": "ramp", "pos": [0, 0.9, 3] },
+    { "is": "ledge", "pos": [0, 1.5, 8] },
+    { "is": "pad", "pos": [7, 0.15, 4] },
+    { "is": "block", "pos": [5.5, 0, -3] },
+    { "is": "crate", "pos": [8.5, 0, -3] },
+    { "is": "post", "pos": [-2.5, 0, -4] },
+    { "is": "post", "pos": [2.5, 0, -4] },
+    { "is": "lift", "pos": [-6, 0, 12.5], "low": 0, "high": 2.5 },
+    { "is": "lift", "pos": [0, 0, 11.5], "low": 0, "high": 1.8 },
+    { "is": "lift", "pos": [7, 0, 10], "low": 0, "high": 5 }
+  ]
+}
